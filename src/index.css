@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #dc734b;
+  --color-secondary: #20452a;
+  --color-accent: #6e6ab4;
+  --color-paper: #f6efe8;
+  --color-ink: #000000;
+  --font-sans: "Intel One Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Monomaniac One", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    color: var(--color-ink);
+    background: var(--color-paper);
+    font-family: var(--font-sans);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
