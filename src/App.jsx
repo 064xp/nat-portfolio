@@ -1,23 +1,15 @@
-const projects = [
-  {
-    title: "Aster House",
-    type: "Brand identity · 2024",
-    color: "bg-lime",
-  },
-  {
-    title: "Field Notes",
-    type: "Editorial system · 2023",
-    color: "bg-coral",
-  },
-  {
-    title: "Common Ground",
-    type: "Digital experience · 2023",
-    color: "bg-sky",
-  },
-];
+import Hero from './components/Hero.jsx'
+import Overview from './components/Overview.jsx'
+import AboutMe from './components/AboutMe.jsx'
 
 function App() {
-  return <main></main>;
+  return (
+    <main>
+      <Hero />
+      <Overview />
+      <AboutMe />
+    </main>
+  )
 }
 
-export default App;
+export default App
