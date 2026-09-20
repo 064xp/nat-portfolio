@@ -68,17 +68,15 @@ Use the following colors as the core palette. Favor large, flat fields of color 
 
 ## Blur-layer motif
 
-Decorative elements and selected major headings use a light, approximately **6px layer blur**. This should read as a printed offset, soft registration error, or slightly misaligned duplicate layer—not as a conventional drop shadow.
+Decorative elements and selected major headings use a light, approximately **1px blur**. This should read as a subtle printed softness or registration error—not as a conventional drop shadow.
 
 ### Implementation direction
 
-Build the effect from a flat duplicate layer behind the main element:
+Apply the effect directly to the selected element:
 
-1. Duplicate the shape or heading using a pseudo-element or separate layer.
-2. Offset it subtly, usually between `2px` and `6px`.
-3. Apply `filter: blur(6px)` to the duplicate layer.
-4. Use a strong palette color for the blurred layer, commonly primary orange or ink.
-5. Keep the foreground element crisp and flat above it.
+1. Apply `filter: blur(1px)` to the shape or heading.
+2. Keep the blur subtle so the element remains legible and visually intentional.
+3. Use a strong palette color for the element, commonly primary orange or ink.
 
 Use this effect on:
 
@@ -126,6 +124,7 @@ Recommended order:
 - Allow oversized type and graphic elements to extend toward or slightly past container edges.
 - Keep content widths controlled so the monospaced text remains readable.
 - Use borders and spacing to create structure instead of rounded containers or drop shadows.
+- Keep offset display headings within the viewport; allow them to wrap naturally on narrow screens rather than clipping them horizontally.
 
 ### Responsive behavior
 
@@ -174,4 +173,4 @@ The voice is observant, direct, thoughtful, and specific.
 - Keep body text at a comfortable size and line height.
 - Provide descriptive alternative text for meaningful images and empty alt text for decoration.
 - Keep keyboard focus states visible against every background.
-- Treat blur as decoration; all important text must remain crisp in the foreground.
+- Treat blur as decoration; supporting text and body copy must remain crisp and all blurred headings must remain legible.
